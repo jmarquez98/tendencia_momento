@@ -24,6 +24,7 @@ def get_etfs(tipo_etf="GEOGRAFIA"):
 
     if tipo_etf=="GEOGRAFIA":
         data_etfs = Data_etfs.loc[Data_etfs["TYPE"]=="countries"]
+        data_etfs = data_etfs.loc[data_etfs["CLASS"] == "developed"]
         data_etfs.sort_values(["CLASS", "CONTINENT"], ascending=(True, True))
         data_etfs = data_etfs[["TICKER", "CLASS", "CONTINENT", "ETF"]]
 
