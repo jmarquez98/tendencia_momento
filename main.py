@@ -7,6 +7,7 @@ import numpy as np
 import quantstats as qs
 from datetime import datetime
 import copy
+import quantstats as qs
 import pandas as pd
 from pandas.core.common import SettingWithCopyWarning
 import warnings
@@ -32,131 +33,94 @@ pd.set_option('display.width', 1000)
 
 
 
-
+# Clase de ETFs ("GEOGRAFIA", "INDUSTRIAS", "FACTORES", "DEUDA", "COMMODITIES")
 tipo = "GEOGRAFIA"
 
+# ponderacion puede ser "equal" o "volatility" segun si se quiere asignar igual ponderacion a cada ETF o si pondera por volatilidad
+#ponderacion = "equal"
+
+# short puede ser True o False segun si se quiere shortear aquellos activos de tendencia y momentum negativos
+short = True
+es_short = "short" if short else "efvo"
+
+
+# Elimino reportes previos y creo carpetas si es necesario
+ut.prepare_folders(short=es_short, tipo_etf=tipo)
+
+
+# Consigo el dataframe correspondiente a los ETFs
 data_etfs = ut.get_etfs(tipo_etf=tipo)
 tickers = data_etfs.index.to_list()
 
-
+# Descargo precios historicos de los ETFs
 force_alt = True
 collection = db.test_collection
-precios, fallas_t = li.load_function(tickers, collection, li.load_price_info,
+data, fallas_t = li.load_function(tickers, collection, li.load_price_info,
                                          li.load_connectionless_info_prices_propio, force_alt=force_alt, cant_t=10, ruedas_fallas=60)
-if not force_alt: li.append_last_value(precios)
+if not force_alt: li.append_last_value(data)
 
-if len(fallas_t)>0: raise ValueError("Fallo en descargar algun ETF.")
+# Si fallo la descarga de algun ETF, levanto error
+if len(fallas_t)>0:
+    raise ValueError("Fallo la descarga de los siguientes ETFs:", fallas_t)
 
 tickers = [ticker for ticker in tickers if ticker not in fallas_t]
 
-print(fallas_t)
 
-
-
+# Descargo la serie historica de tasas a 3 meses
 data_t3m = download_fred("TB3MS")
 
-data = {}
-for ticker in precios:
-    df = copy.deepcopy(precios[ticker])
-    df = mg.get_dateValues(dates_df=df, last_dates=5000, period="M")
-    df["Return"] = df["Close"].pct_change()
-    data[ticker] = df
+
+# Mensualizo series de precios y agrego columnas de retornos y volatilidad
+data = ut.prepare_data(precios=data)
 
 
+# Creo dataframe con los retornos de 12 meses (tendencia) para cada ticker y mes
+tendencias = ut.get_trends_df(data=data, trend_window=12, save_df=True)
 
-retornos = pd.DataFrame()
-for ticker in data:
-    df = data[ticker].copy(deep=True)
-
-    df["Return_12"] = df["Close"].pct_change(12)
-    df[ticker] = df["Return_12"]
-
-    df.to_excel(path + f"/etf_dfs/{ticker}.xlsx")
-
-    retornos = pd.concat([retornos, df[[ticker]]], axis=1)
-
-retornos.sort_index(ascending=True, inplace=True)
-retornos = retornos.T
+# Obtengo un diccionario cuyas keys son fechas a las cuales les corresponde un diccionario con dos keys: long y short.
+# A cada una de las dos keys les corresponde una lista de tickers, los que se van long y short respectivamente
+inversiones = ut.get_trend_and_momentum(retornos=tendencias)
 
 
-fechas = retornos.columns.to_list()
-inversiones = {}
-for fecha in fechas:
-
-    tabla = retornos.copy(deep=True)
-    tabla.dropna(inplace=True, subset=[fecha])
-    tabla.sort_values(by=fecha, ascending=False, inplace=True)
-
-    cut = math.ceil(len(tabla) * 0.25)
-
-    longs = tabla.iloc[:cut]
-    shorts = tabla.iloc[-cut:]
-
-    longs = longs.loc[longs[fecha] > 0]
-    shorts = shorts.loc[shorts[fecha] < 0]
-
-    tickers_l = longs.index.to_list()
-    tickers_s = shorts.index.to_list()
-
-    inversiones[fecha] = {"long": tickers_l, "short": tickers_s}
+# Dataframe cuyas filas son fechas y las columnas son tickers. Para cada fecha, los tickers que no van long ni short
+# contienen un cero. Los que van long tienen su retorno del mes, y los que se van short su retorno multiplicado por -1.
+posicion = ut.get_returns_df(data=data, inversiones=inversiones)
 
 
-log = pd.DataFrame()
-posicion = pd.DataFrame(columns=tickers)
-ret_acum = 1
-for i in range(1, len(fechas)):
-    hoy = fechas[i]
-    ayer = fechas[i-1]
+# Dataframe cuyas filas son fechas y columnas son tickers, en cada celda esta el retorno mensual del ETF.
+benchmark = ut.get_trends_df(data=data, trend_window=1, save_df=False).T.iloc[1:]
 
-    longs = inversiones[ayer]["long"]
-    shorts = inversiones[ayer]["short"]
-
-    posicion.loc[hoy] = 0
+"""
+# Guardo reportes de cada ETF
+for ticker in tickers:
+    path_rep = path_reporte + "/" + ticker + ".html"
+    qs.reports.html(returns=posicion[ticker], benchmark=benchmark[ticker], output=path_rep, title=ticker)
+"""
 
 
-    if len(longs+shorts)==0:
-        log.loc[hoy, "Return"] = 0
-        log.loc[hoy, "Acum"] = ret_acum
-        continue
+for ponderacion in ["equal", "volatility"]:
 
-    ret = 0
-    den = 0
-    for ticker in longs:
-        retorno = data[ticker].loc[hoy, "Return"]
-        posicion.loc[hoy, ticker] = retorno
-        if round(retorno, 8)!=0: den += 1 # No quiero que me tome falseamente como positivo/negativo un cero
-        ret += retorno
+    # Obtengo un dataframe de las dimensiones de posicion, que contiene en cada celda la ponderacion que se lleva cada ETF.
+    pond_df = ut.get_weights_df(data=data, fechas=posicion.index, pos="long/short", inversiones=inversiones, weight_type=ponderacion)
 
-    for ticker in shorts:
-        retorno = data[ticker].loc[hoy, "Return"]
-        posicion.loc[hoy, ticker] = -retorno
-        if round(retorno, 8) != 0: den += 1 # No quiero que me tome falseamente como positivo/negativo un cero
-        ret -= retorno
+    # Obtengo un dataframe de las dimensiones de benchmark, que contiene en cada celda la ponderacion que se lleva cada ETF.
+    benchmark_pond_df = ut.get_weights_df(data=data, fechas=benchmark.index, pos="all", weight_type=ponderacion)
 
 
+    # Pondero los retornos historicos de cada ETF
+    posicion = posicion * pond_df
+    posicion["Return"] = posicion.sum(axis=1)
+    posicion["factor"] = 1 + posicion["Return"]
+    posicion["acum"] = posicion["factor"].cumprod()
 
-    ret = ret / den
-    log.loc[hoy, "Return"] = ret
-
-    # if hoy not in data_t3m.index: continue
-    """
-    tasa_3m = data_t3m.loc[hoy, "TB3MS"] / 100
-    tasa_3m = tasa_3m * monthrange(hoy.year, hoy.month)[1] / 360
-    ret = ret - tasa_3m
-    """
-
-    ret_acum *= (1+ret)
-    log.loc[hoy, "Acum"] = ret_acum
+    # Lo mismo para el benchmark
+    benchmark = benchmark * benchmark_pond_df
+    benchmark["Return"] = benchmark.sum(axis=1)
+    benchmark["factor"] = 1 + benchmark["Return"]
+    benchmark["acum"] = benchmark["factor"].cumprod()
 
 
-posicion["Return"] = posicion.replace(0, np.nan).mean(axis=1)
-posicion["factor"] = 1 + posicion["Return"]
-posicion["acum"] = posicion["factor"].cumprod()
-posicion.to_excel("posicion.xlsx")
-
-print(ret_acum)
-
-log.to_excel(path + "/logs/log.xlsx")
-ret_acum = ret_acum**(12/len(fechas)) - 1
-
-print(round(ret_acum*100, 2), "%")
+    # Guardo reporte final del portafolio
+    path_rep = path + f"/modelos_{es_short}/{tipo}/{tipo}_{es_short}_{ponderacion}.html"
+    titulo = f"MOMENTUM & TREND - {tipo}_{es_short}_{ponderacion} weighting"
+    qs.reports.html(returns=posicion["Return"], benchmark=benchmark["Return"], output=path_rep, title=titulo)
