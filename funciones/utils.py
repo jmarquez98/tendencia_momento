@@ -1,4 +1,4 @@
-from  matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import LinearSegmentedColormap
 import dataframe_image as dfi
 import numpy as np
 import pandas as pd
