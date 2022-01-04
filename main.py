@@ -40,7 +40,7 @@ tipo = "GEOGRAFIA"
 #ponderacion = "equal"
 
 # short puede ser True o False segun si se quiere shortear aquellos activos de tendencia y momentum negativos
-short = True
+short = False
 es_short = "short" if short else "efvo"
 
 
@@ -90,18 +90,20 @@ posicion = ut.get_returns_df(data=data, inversiones=inversiones)
 # Dataframe cuyas filas son fechas y columnas son tickers, en cada celda esta el retorno mensual del ETF.
 benchmark = ut.get_trends_df(data=data, trend_window=1, save_df=False).T.iloc[1:]
 
-"""
 # Guardo reportes de cada ETF
 for ticker in tickers:
-    path_rep = path_reporte + "/" + ticker + ".html"
-    qs.reports.html(returns=posicion[ticker], benchmark=benchmark[ticker], output=path_rep, title=ticker)
-"""
+    path_rep = path + f"/modelos_{es_short}/{tipo}/reportes/" + ticker + ".html"
+    bench = benchmark[ticker].dropna()
+    port = posicion.loc[posicion.index >= bench.index[0]][ticker]
+    qs.reports.html(returns=port, benchmark=bench, output=path_rep, title=ticker)
+
 
 
 for ponderacion in ["equal", "volatility"]:
 
     # Obtengo un dataframe de las dimensiones de posicion, que contiene en cada celda la ponderacion que se lleva cada ETF.
-    pond_df = ut.get_weights_df(data=data, fechas=posicion.index, pos="long/short", inversiones=inversiones, weight_type=ponderacion)
+    pos = "long/short" if short else "long"
+    pond_df = ut.get_weights_df(data=data, fechas=posicion.index, pos=pos, inversiones=inversiones, weight_type=ponderacion)
 
     # Obtengo un dataframe de las dimensiones de benchmark, que contiene en cada celda la ponderacion que se lleva cada ETF.
     benchmark_pond_df = ut.get_weights_df(data=data, fechas=benchmark.index, pos="all", weight_type=ponderacion)

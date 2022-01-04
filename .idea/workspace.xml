@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="91d114ae-f2ab-4eb8-b1f5-54b4b5dd0abe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/GEOGRAFIA_efvo_equal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/GEOGRAFIA_efvo_volatility.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EDEN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EFNL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EIRL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EIS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/ENOR.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/ENZL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWG.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWH.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWJ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWO.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWP.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWQ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWU.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/PGAL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/SPY.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/ENOR.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/ECH.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EDEN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EFNL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EIRL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EIS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/ENOR.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/ENZL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWG.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWH.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWJ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWO.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWP.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWQ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWU.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/EWZ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/MCHI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/reportes/PGAL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/AGT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/AGT.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/CNYA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/CNYA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/ECH.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/ECH.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EDEN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EDEN.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EFNL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EFNL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EGPT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EGPT.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EIDO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EIDO.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EIRL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EIRL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EIS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EIS.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/ENOR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/ENOR.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/ENZL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/ENZL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EPHE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EPHE.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EPOL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EPOL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EPU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EPU.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/ERUS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/ERUS.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWC.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWC.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWD.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWD.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWG.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWG.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWH.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWH.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWI.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWI.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWJ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWJ.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWM.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWN.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWN.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWO.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWO.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWP.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWQ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWQ.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWS.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWT.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWU.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWW.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWW.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EWZ.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWZ.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/EZA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EZA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/GREK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/GREK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/ICOL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/ICOL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/INDA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/INDA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/KSA.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/KSA.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/KWT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/KWT.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/MCHI.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/MCHI.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/NGE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/NGE.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/PAK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/PAK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/PGAL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/PGAL.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/QAT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/QAT.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/SPY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/SPY.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/THD.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/THD.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/TUR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/TUR.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/UAE.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/UAE.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etf_dfs/VNM.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/VNM.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/GEOGRAFIA_short_equal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/GEOGRAFIA_short_volatility.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23En2AEcQRbY7h1Q20dI87qxwr6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="tendencia_momento" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Juani\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91d114ae-f2ab-4eb8-b1f5-54b4b5dd0abe" name="Changes" comment="" />
+      <created>1641307906396</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641307906396</updated>
+    </task>
+    <servers />
+  </component>
+</project>
