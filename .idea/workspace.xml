@@ -26,7 +26,7 @@
       <change beforePath="$PROJECT_DIR$/etf_dfs/EWU.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/EWU.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etf_dfs/PGAL.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/PGAL.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etf_dfs/SPY.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/etf_dfs/SPY.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funciones/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/GEOGRAFIA_efvo_equal.html" beforeDir="false" afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/GEOGRAFIA_efvo_equal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/GEOGRAFIA_efvo_volatility.html" beforeDir="false" afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/GEOGRAFIA_efvo_volatility.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EDEN.html" beforeDir="false" afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EDEN.html" afterDir="false" />
@@ -52,7 +52,7 @@
       <change beforePath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWU.html" beforeDir="false" afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/EWU.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/PGAL.html" beforeDir="false" afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/PGAL.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/SPY.html" beforeDir="false" afterPath="$PROJECT_DIR$/modelos_efvo/GEOGRAFIA/reportes/SPY.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelos_short/GEOGRAFIA/ENOR.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebas.py" beforeDir="false" afterPath="$PROJECT_DIR$/pruebas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +73,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../modelo_vix" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../momentum_turning_points" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="tendencia_momento" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,7 +83,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Juani\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\marqu\AppData\Local\Programs\Python\Python38-32\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -97,8 +97,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pruebas" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="tendencia_momento" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\marqu\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.pruebas" />
+    </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="91d114ae-f2ab-4eb8-b1f5-54b4b5dd0abe" name="Changes" comment="" />
@@ -108,5 +136,31 @@
       <updated>1641307906396</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1641822811675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1641822811675" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1641823383368">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1641823383368" />
+    <state width="489" height="696" key="GridCell.Tab.0.bottom" timestamp="1641857113643">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="489" height="696" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1641857113643" />
+    <state width="489" height="696" key="GridCell.Tab.0.center" timestamp="1641857113643">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="489" height="696" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1641857113643" />
+    <state width="489" height="696" key="GridCell.Tab.0.left" timestamp="1641857113643">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="489" height="696" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1641857113643" />
+    <state width="489" height="696" key="GridCell.Tab.0.right" timestamp="1641857113643">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="489" height="696" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1641857113643" />
   </component>
 </project>

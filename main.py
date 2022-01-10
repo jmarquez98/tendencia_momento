@@ -6,6 +6,7 @@ import dataframe_image as dfi
 import numpy as np
 import quantstats as qs
 from datetime import datetime
+import pytz
 import copy
 import quantstats as qs
 import pandas as pd
@@ -30,6 +31,7 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
+start = datetime.now(pytz.timezone("America/Argentina/Buenos_Aires"))
 
 
 
@@ -42,6 +44,8 @@ tipo = "GEOGRAFIA"
 # short puede ser True o False segun si se quiere shortear aquellos activos de tendencia y momentum negativos
 short = False
 es_short = "short" if short else "efvo"
+
+
 
 
 # Elimino reportes previos y creo carpetas si es necesario
@@ -92,9 +96,12 @@ benchmark = ut.get_trends_df(data=data, trend_window=1, save_df=False).T.iloc[1:
 
 # Guardo reportes de cada ETF
 for ticker in tickers:
+    print(ticker)
     path_rep = path + f"/modelos_{es_short}/{tipo}/reportes/" + ticker + ".html"
-    bench = benchmark[ticker].dropna()
-    port = posicion.loc[posicion.index >= bench.index[0]][ticker]
+    bench = benchmark[ticker].dropna().copy(deep=True)
+    port = posicion.loc[posicion.index >= bench.index[0]][ticker].copy(deep=True)
+    first_date = port.index[0]
+    if first_date.month==12: bench, port = bench[1:], port[1:]
     qs.reports.html(returns=port, benchmark=bench, output=path_rep, title=ticker)
 
 
@@ -126,3 +133,13 @@ for ponderacion in ["equal", "volatility"]:
     path_rep = path + f"/modelos_{es_short}/{tipo}/{tipo}_{es_short}_{ponderacion}.html"
     titulo = f"MOMENTUM & TREND - {tipo}_{es_short}_{ponderacion} weighting"
     qs.reports.html(returns=posicion["Return"], benchmark=benchmark["Return"], output=path_rep, title=titulo)
+
+
+
+
+
+end = datetime.now(pytz.timezone("America/Argentina/Buenos_Aires"))
+end_string = datetime.strftime(end, "%Y-%m-%d H:M:S")
+
+print(end_string, "tendencia_momento.py corrio correctamente!")
+print("Tiempo de ejecucion:", end - start)

@@ -6,6 +6,7 @@ import dataframe_image as dfi
 import numpy as np
 import quantstats as qs
 from datetime import datetime
+import pytz
 import copy
 import pandas as pd
 from pandas.core.common import SettingWithCopyWarning
@@ -31,7 +32,14 @@ pd.set_option('display.width', 1000)
 
 
 
+end = datetime.now(pytz.timezone("America/Argentina/Buenos_Aires"))
+end_string = datetime.strftime(end, "%Y-%m-%d %H:%M:%S")
 
+
+print(end_string)
+
+
+"""
 # Clase de ETFs ("GEOGRAFIA", "INDUSTRIAS", "FACTORES", "DEUDA", "COMMODITIES")
 tipo = "GEOGRAFIA"
 
@@ -41,7 +49,7 @@ data_etfs = ut.get_etfs(tipo_etf=tipo)
 
 print(data_etfs)
 
-
+"""
 
 
 """
